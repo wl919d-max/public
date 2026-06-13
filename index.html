@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>产品原型与文档</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #e4e7ec;
+      --primary: #155eef;
+      --primary-soft: #eff4ff;
+      --shadow: 0 12px 32px rgba(16, 24, 40, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #eaf1ff 0, transparent 34%),
+        var(--bg);
+      font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+    }
+
+    main {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 72px 0;
+    }
+
+    header {
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      display: flex;
+      min-height: 230px;
+      flex-direction: column;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .tag {
+      align-self: flex-start;
+      margin-bottom: 20px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      color: var(--primary);
+      background: var(--primary-soft);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    .description {
+      margin: 0 0 24px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    a {
+      display: inline-flex;
+      min-height: 40px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--text);
+      background: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    a.primary {
+      border-color: var(--primary);
+      color: #fff;
+      background: var(--primary);
+    }
+
+    a:hover {
+      transform: translateY(-1px);
+      border-color: var(--primary);
+    }
+
+    @media (max-width: 720px) {
+      main {
+        padding: 48px 0;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>产品原型与文档</h1>
+      <p>集中查看已公开的产品原型和需求文档。</p>
+    </header>
+
+    <section class="projects" aria-label="项目列表">
+      <article class="card">
+        <span class="tag">仓储管理</span>
+        <h2>入库单条码打印</h2>
+        <p class="description">入库物料标签打印原型及产品需求文档。</p>
+        <div class="actions">
+          <a class="primary" href="./入库单条码打印/入库单条码打印.html">查看原型</a>
+          <a href="./入库单条码打印/入库单条码打印PRD.md">查看 PRD</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="tag">车辆管理</span>
+        <h2>私车公用详情页</h2>
+        <p class="description">私车公用申请、补贴方式与费用结算详情原型。</p>
+        <div class="actions">
+          <a class="primary" href="./车辆管理 私车公用详情页/车辆管理 私车公用详情页.html">查看原型</a>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
